@@ -1,19 +1,24 @@
 package Practice;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class Practice {
-    static void check(int[] arr){
-        for (int i = arr.length-1; i >=0 ; i--) {
-            System.out.println(arr[i]);
+    public static long findMinDiff (ArrayList<Integer> list, int n, int m)
+    {
+        Collections.sort(list); //first we sort the array
+        int min = Integer.MAX_VALUE;
+        for(int i =0; i+m-1<n;i++){
+            int diff = list.get(i+m-1)-list.get(i);
+            if(diff < min ) {
+                min =  diff;
+            }
         }
+        return min;
+
+
     }
-
-
-
-
     public static void main(String[] args) {
-        int[] arr = {1, 2, 3, 4, 5};
-        check(arr);
-
 
     }
 }

@@ -1,10 +1,11 @@
 package Arraylist;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class IntroductionPart {
     public static void main(String[] args) {
-        //ArrayList is the collection framework of java
+        //ArrayList is the collection framework of java and we create any primitive ArrayList
         ArrayList<Integer> list1 = new ArrayList<>();
         ArrayList<String> list2 = new ArrayList<>();
         ArrayList<Boolean> list3 = new ArrayList<>();
@@ -46,6 +47,18 @@ public class IntroductionPart {
         //print the arraylist 
         for (int i = 0; i < list1.size(); i++) {
             System.out.println(list1.get(i));
+
+            /*sort the arraylist in java
+            if we sort the list we use collections.sort() method class firstly we import the class in our main class
+             * Collection vs Collections* Collection is interface and Collections are class
+             in array there is array.sort() method for sort the array
+             Note - when we sort the list or array via array.sort() or Collections.sort() method they sort
+             in the ascending order but if we want to sort Arraylist in descending order we use Collections.sort(list,Collections.reverseOrder())*/
+            Collections.sort(list1);//sort the list in ascending order
+            Collections.sort(list1,Collections.reverseOrder());//sort the list in descending order
+            //here Collections.reverseOrder() are the comparator - jo functions logic hote hai.
+
         }
+
     }
 }
