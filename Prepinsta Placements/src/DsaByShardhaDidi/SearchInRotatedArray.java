@@ -20,7 +20,7 @@ public class SearchInRotatedArray {
                     start = mid+1;
                 }
             } else {
-                if (target > arr[mid] && target < arr[end]){
+                if (target > arr[mid] && target <= arr[end]){
                     start = mid + 1;
                 }else {
                     end = mid - 1;
@@ -34,8 +34,8 @@ public class SearchInRotatedArray {
     }
 
     public static void main(String[] args) {
-        int[] arr = {120,130,40,50,90,100,110};
-        int ans = search(arr,100);
+        int[] arr = {4,5,6,7,0,1,2};
+        int ans = search(arr,6);
         System.out.println(ans);
     }
 }
