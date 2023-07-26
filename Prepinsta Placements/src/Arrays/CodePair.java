@@ -4,20 +4,20 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class CodePair {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Size");
-        int n = sc.nextInt();
-        int[] arr = new int[n];
-        for (int i = 0; i < n; i++) {
-            System.out.println("index At " + i);
-            arr[i] = sc.nextInt();
-        }
-        System.out.println(Arrays.toString(arr));
-        for (int i = 0; i < n - 1; i++) {
-            for (int j = i + 1; j < n; j++) {
-                System.out.println("(" + arr[i] + "," + arr[j] + ")");
+    static int codePair(int[] arr){
+        int count = 0;
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i+1; j < arr.length; j++) {
+                System.out.println(arr[i] + " " + arr[j]);
+                count+=1;
             }
         }
+        return count;
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {2,4,6};
+        int ans = codePair(arr);
+        System.out.println(ans);
     }
 }
