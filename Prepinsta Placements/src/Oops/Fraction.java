@@ -60,4 +60,15 @@ public class Fraction {
         simplify();
 
     }
+    public void multiply(Fraction f2){
+        this.numerator = this.numerator * f2.numerator;
+        this.denominator = this.denominator * f2.denominator;
+        simplify();
+    }
+    public static Fraction add(Fraction f1,Fraction f2){
+        int newNum = f1.numerator * f2.denominator + f1.denominator * f2.numerator;
+        int newDenominator = f1.denominator * f2.denominator;
+        Fraction f = new Fraction(newNum,newDenominator);
+        return f;
+    }
 }
