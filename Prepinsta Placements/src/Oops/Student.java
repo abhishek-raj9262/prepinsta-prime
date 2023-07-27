@@ -2,7 +2,7 @@ package Oops;
 
 public class Student {
     String name;
-   private final int roll; //only access within the same class
+   private final int roll; // private - only access within the same class
     private static int count; //here we count how many objects are created
 
     //create a getter for count
@@ -26,7 +26,7 @@ public class Student {
      now we see that use of constructor */
     //create a custom constructor
 
-    public Student(String name,int roll){ //syntax of constructor
+    public Student(String name,int roll){ //syntax of constructor class name and constructor name are always same
         this.name = name;
         this.roll = roll;
         count++;
