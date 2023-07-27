@@ -13,10 +13,12 @@ public class Practice {
 
     public void setNumerator(int numerator) {
         this.numerator = numerator;
+        simplify();
     }
 
     public void setDenominator(int denominator) {
         this.denominator = denominator;
+        simplify();
     }
 
     public int getDenominator() {
@@ -44,7 +46,10 @@ public class Practice {
     }
 
     public static void main(String[] args) {
-        Practice p1 = new Practice(20,30);
+        Practice p1 = new Practice(10,10);
+        p1.setNumerator(50);
+        p1.setDenominator(20);
+        System.out.println(p1.getNumerator());
         System.out.println(p1.getDenominator());
     }
 
