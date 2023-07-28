@@ -8,7 +8,7 @@ public class AccessComplexNumber {
         c2.print();
         //c2.addOf2ComplexNumber(c1);
         //c2.print();
-        c2.multiply(c1);
+
         c2.print();
     }
 }

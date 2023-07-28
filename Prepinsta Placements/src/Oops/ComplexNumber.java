@@ -33,5 +33,5 @@ public class ComplexNumber {
     public void print(){
         System.out.println(real + "+"+ "i" + imaginary);
     }
-    
+
 }

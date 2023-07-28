@@ -4,56 +4,42 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class Practice {
-    int numerator;
-    int denominator;
+    private int num;
+    private int deno;
 
-    public int getNumerator() {
-        return numerator;
-    }
-
-    public void setNumerator(int numerator) {
-        this.numerator = numerator;
-        simplify();
-    }
-
-    public void setDenominator(int denominator) {
-        this.denominator = denominator;
-        simplify();
-    }
-
-    public int getDenominator() {
-        return denominator;
-    }
-
-    public Practice(int numerator, int denominator){
-        this.numerator = numerator;
-        if (denominator == 0){
-            //ToDo error out
+    public Practice(int num,int deno){
+        this.num=num;
+        if (deno == 0){
+            return;
         }
-        this.denominator = denominator;
+        this.deno= deno;
         simplify();
     }
+
+    public int getDeno() {
+        return deno;
+    }
+
+    public int getNum() {
+        return num;
+    }
+
     private void simplify() {
         int gcd = 1;
-        int smaller = Math.min(numerator,denominator);
-        for (int i = 2; i <=smaller ; i++) {
-            if (numerator % i == 0 && denominator % i == 0){
+        int min =  Math.min(num,deno);
+        for (int i = 2; i <= min ; i++) {
+            if (num % i == 0 && deno % i ==0){
                 gcd = i;
+
             }
         }
-        numerator = numerator/gcd;
-        denominator = denominator/gcd;
+        num = num / gcd;
+        deno = deno/gcd;
     }
 
-    public static void main(String[] args) {
-        Practice p1 = new Practice(10,10);
-        p1.setNumerator(50);
-        p1.setDenominator(20);
-        System.out.println(p1.getNumerator());
-        System.out.println(p1.getDenominator());
-    }
 
 }
+
 
 
 
