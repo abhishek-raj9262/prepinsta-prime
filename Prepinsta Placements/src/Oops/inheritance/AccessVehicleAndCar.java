@@ -1,6 +1,6 @@
 package Oops.inheritance;
 
-public class AccessVehicle {
+public class AccessVehicleAndCar {
     public static void main(String[] args) {
         //for car class
         Car c = new Car();

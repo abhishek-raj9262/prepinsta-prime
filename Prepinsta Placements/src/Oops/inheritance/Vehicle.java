@@ -5,7 +5,7 @@ public class Vehicle {
     int maxSpeed;
 
     public void print(){
-        System.out.println("Vehicle color : " + colour);
-        System.out.println("Vehicle speed : " + maxSpeed + "Km/h");
+        System.out.println("color : " + colour);
+        System.out.println("speed : " + maxSpeed + "Km/h");
     }
 }
