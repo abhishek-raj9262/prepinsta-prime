@@ -1,5 +1,10 @@
 package Oops.Encapsulation;
-public class Encapsulation {
+
+import Oops.AccessModifier.Protected;
+
+import javax.xml.namespace.QName;
+
+public class Encapsulation extends Protected {
 //    Encapsulation is defined as the wrapping up of data under a single unit. It is the
 //    mechanism that binds together code and the data it manipulates. Another way to
 //    think about encapsulation is, it is a protective shield that prevents the data from
@@ -16,4 +21,14 @@ public class Encapsulation {
 
 
     //note - fraction class is the best example of the encapsulation
-}
+
+    //example of protected keyword
+    public static void main(String[] args) {
+        System.out.println();
+        Protected p = new Protected();
+        System.out.println(p.roll);
+        System.out.println(p.getMob());
+    }
+    }
+
+

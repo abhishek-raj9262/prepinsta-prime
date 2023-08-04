@@ -1,13 +1,16 @@
 package Sorting;
 
 public class BubbleSort {
-    public static void reverse(int[] arr){
-        int n = arr.length-1;
-        for (int i = 0; i<n ; i++) {
-            int temp = arr[i];
-            arr[i] = arr[n];
-            arr[n] = temp;
-            n--;
+    public static void applyBubbleSort(int[] arr){
+        for (int i = 0; i < arr.length-1; i++) {
+            for (int j = 0; j < arr.length-1-i; j++) {
+                if (arr[j] > arr[j+1]){
+                    int temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+                }
+
+            }
         }
 
     }
@@ -20,8 +23,8 @@ public class BubbleSort {
     }
 
     public static void main(String[] args) {
-        int[] arr = {1,2,3,4,5,6};
-        reverse(arr);
+        int[] arr = {1,7,4,3,9,2,6};
+        applyBubbleSort(arr);
         print(arr);
     }
 }
