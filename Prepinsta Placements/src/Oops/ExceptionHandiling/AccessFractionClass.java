@@ -2,10 +2,10 @@ package Oops.ExceptionHandiling;
 
 public class AccessFractionClass {
 
-    public static void temp() {
-        Fraction f = new Fraction(10,23);
+    public static void temp() throws ZeroDenominatorException{
+        Fraction f = new Fraction(10,8);
         try {
-            f.setDenominator(12);
+            f.setDenominator(0);
         }
         catch (ZeroDenominatorException e){
             System.out.println("hey you cant set zero denominator");
@@ -14,7 +14,7 @@ public class AccessFractionClass {
 
 
     }
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ZeroDenominatorException{
         temp();
 
     }

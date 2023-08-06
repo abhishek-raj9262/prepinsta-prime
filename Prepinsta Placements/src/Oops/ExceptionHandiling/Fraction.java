@@ -4,10 +4,11 @@ public class Fraction {
     private int numerator;
     private int denominator;
 
-    public Fraction(int numerator, int denominator){
+    public Fraction(int numerator, int denominator) throws ZeroDenominatorException{
         this.numerator = numerator;
         if (denominator == 0){
-            //ToDo error out
+            ZeroDenominatorException e = new ZeroDenominatorException();
+            throw e;
         }
         this.denominator = denominator;
         simplify();
@@ -66,7 +67,7 @@ public class Fraction {
         this.denominator = this.denominator * f2.denominator;
         simplify();
     }
-    public static Fraction add(Fraction f1,Fraction f2){
+    public static Fraction add(Fraction f1,Fraction f2) throws ZeroDenominatorException{
         int newNum = f1.numerator * f2.denominator + f1.denominator * f2.numerator;
         int newDenominator = f1.denominator * f2.denominator;
         Fraction f = new Fraction(newNum,newDenominator);
