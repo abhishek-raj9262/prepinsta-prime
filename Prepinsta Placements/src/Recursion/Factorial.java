@@ -6,11 +6,12 @@ public class Factorial {
             return 1;
         }
         int ans = factorialOfN(n-1);
-        return n * ans;
+        int ans2 = n * ans;
+        return ans2;
     }
 
     public static void main(String[] args) {
-        int n = 5;
+        int n = 3;
         int ans = factorialOfN(n);
         System.out.println(ans);
     }
