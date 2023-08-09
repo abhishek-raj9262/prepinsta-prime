@@ -15,7 +15,7 @@ public class PowerOf2anotherApproach {
     }
 
     public static void main(String[] args) {
-        boolean ans = isPowerOfTwo(17);
+        boolean ans = isPowerOfTwo(4);
         System.out.println(ans);
     }
 }
