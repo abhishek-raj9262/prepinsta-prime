@@ -19,7 +19,9 @@ public class CheckArraySortedOrNot {
         return smallArrayAns;
 
     }
-
+    //note - this functions increase the space complexity of the code, so this is not the right way to
+    //  check the array is sorted or not
+    // we solve this problem in checkSortedBetter class go and see the code
     public static void main(String[] args) {
         int[] arr = {1,2,3,5,1};
         boolean ans = checkSorted(arr);
