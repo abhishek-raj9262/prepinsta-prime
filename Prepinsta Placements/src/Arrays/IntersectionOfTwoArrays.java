@@ -8,7 +8,7 @@ public class IntersectionOfTwoArrays {
             for (int j = 0; j < n2; j++) {
                 if (arr1[i] == arr2[j]){
                     System.out.println(arr1[i]);
-                    arr2[j]=Integer.MIN_VALUE;
+                    //arr2[j]=Integer.MIN_VALUE;
                     break;
                 }
 
